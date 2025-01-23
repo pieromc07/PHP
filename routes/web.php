@@ -1,6 +1,5 @@
 <?php
 
-
 use App\Controllers\LoginController;
 use App\Controllers\HomeController;
 
@@ -15,14 +14,14 @@ $routes = [
   'home' => 'home',
   'login' => 'login',
   '404' => '404',
-  'users' => [
-    'index',
-    'create',
-    'store',
-    'edit',
-    'update',
-    'destroy',
-    'show'
+  'users' => [ // Controller
+    'index', // list
+    'create', // form create
+    'store', // created
+    'edit', // form edit
+    'update', // updated
+    'destroy', // deleted
+    'show' // view
   ]
 ];
 
@@ -35,7 +34,7 @@ if ($loginController->isLogged()) {
   } else {
     if (array_key_exists($URL[0], $routes)) {
       if (count($URL) > 1) {
-        $controllerRoutes = $routes[$URL[0]];
+        $controllerRoutes = $routes[$URL[0]]; // users
         $controller = $URL[0];
         if (in_array($URL[1], $controllerRoutes)) {
           $method = $URL[1];

@@ -30,6 +30,9 @@ class MyValidator
         if ($rule === 'numeric' && !is_numeric($data[$field])) {
           $errors[$field] = 'El campo debe ser un número.';
         }
+        if ($rule === 'min:2' && strlen($data[$field]) < 2) {
+          $errors[$field] = 'El campo debe tener al menos 2 caracteres.';
+        }
       }
     }
 

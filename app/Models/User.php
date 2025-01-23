@@ -13,12 +13,18 @@ class User extends Model
   protected $table = 'users';
 
   /**
+   * Llave primaria
+   * 
+   * @var string
+   */
+  protected $primaryKey = 'id';
+
+  /**
    * Atributos de la tabla
    * 
    * @var array
    */
   protected $attributes = [
-    'id' => null,
     'name' => null,
     'age' => null,
   ];
@@ -29,7 +35,7 @@ class User extends Model
    * @var array
    */
   protected $rules = [
-    'name' => 'required',
+    'name' => 'required|min:2',
     'age' => 'required|numeric',
   ];
 }

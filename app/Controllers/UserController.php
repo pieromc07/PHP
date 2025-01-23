@@ -35,10 +35,16 @@ class UserController extends Controller
    */
   public function store(): void
   {
+
+    $user = new User();
+    $errors = $user->validate($_POST);
+    if (!empty($errors)) {
+      $this->view('users/create', compact('errors'));
+      return;
+    }
     $name = $_POST['name'];
     $age = $_POST['age'];
 
-    $user = new User();
     $user->create([
       'name' => $name,
       'age' => $age,

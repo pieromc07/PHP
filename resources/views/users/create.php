@@ -23,6 +23,15 @@
       </div>
       <button type="submit" class="btn btn-primary">Crear usuario</button>
     </form>
+    <?php if (isset($errors)) : ?>
+      <div class="alert alert-danger mt-3">
+        <ul>
+          <?php foreach ($errors as $error) : ?>
+            <li><?php echo $error; ?></li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+    <?php endif; ?>
   </div>
 
   <script src="<?php __DIR__ ?>/public/js/bootstrap.bundle.min.js"></script>

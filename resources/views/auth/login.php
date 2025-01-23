@@ -9,7 +9,7 @@
 
 <body>
   <!-- Formulario login -->
-  <form action="/login" method="post">
+  <form action="/login" method="POST">
     <input type="text" name="email" placeholder="Correo electrónico">
     <input type="password" name="password" placeholder="Contraseña">
     <button type="submit">Iniciar sesión</button>

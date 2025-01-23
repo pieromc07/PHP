@@ -15,6 +15,13 @@ class Model
   protected $table;
 
   /**
+   * Llave primaria
+   * 
+   * @var string
+   */
+  protected $primaryKey;
+
+  /**
    * Atributos de la tabla
    * 
    * @var array
