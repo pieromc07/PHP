@@ -1,0 +1,10 @@
+-- Active: 1737219699010@@127.0.0.1@3306@billing_db
+CREATE DATABASE IF NOT EXISTS `test_db` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+use test_db;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT NOT NULL
+);
